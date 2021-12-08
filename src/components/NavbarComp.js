@@ -1,5 +1,6 @@
 import React from "react"
-import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container } from 'react-bootstrap'
+import "../styles.css"
+import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container, Image } from 'react-bootstrap'
 
 
  const NavbarComp = () => {
@@ -7,18 +8,18 @@ import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container } from '
 
             <Navbar bg="light" expand="lg">
             <Container>
-              <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+              <Navbar.Brand href="#home"><Image className="logoStyle" src="/logo_libreria.png" rounded /></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                   <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Link</Nav.Link>
-                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <Nav.Link href="#link">Nosotros</Nav.Link>
+                  <NavDropdown title="Productos" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Papeleria</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Artistica</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Articulos para bujo</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4">Todo</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
               </Navbar.Collapse>
