@@ -1,12 +1,13 @@
 import React from "react"
 import "../styles.css"
+import CartWidget from "./CartWidget"
 import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container, Image } from 'react-bootstrap'
 
 
  const NavbarComp = () => {
         return (
 
-            <Navbar bg="light" expand="lg">
+          <Navbar bg="light" expand="lg">
             <Container>
               <Navbar.Brand href="#home"><Image className="logoStyle" src="/logo_libreria.png" rounded /></Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -21,6 +22,7 @@ import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container, Image }
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Todo</NavDropdown.Item>
                   </NavDropdown>
+                  <CartWidget/>
                 </Nav>
               </Navbar.Collapse>
             </Container>
