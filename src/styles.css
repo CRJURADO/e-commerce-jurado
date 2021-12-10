@@ -7,3 +7,23 @@
     justify-content: center;
     margin: 3%;
 }
+
+.prodCards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.countInp{
+    width:30%;
+}
+
+.countInpu{
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.countText{
+    width: inherit;
+    height: 140%;
+    justify-content: center;
+}
