@@ -22,6 +22,7 @@ import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container, Image }
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Todo</NavDropdown.Item>
                   </NavDropdown>
+                  <Nav.Link href="#link">Contacto</Nav.Link>
                   <CartWidget/>
                 </Nav>
               </Navbar.Collapse>

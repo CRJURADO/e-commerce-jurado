@@ -1,8 +1,15 @@
-import React from "react"
+import { useState } from 'react'
+import ItemCount from "./ItemCount"
 import "../styles.css"
 import { Card, Button, span, input, InputGroup, FormControl } from 'react-bootstrap'
 
+
 const ItemListContainer = ({nombre}) => {
+
+    const onAdd = (contador) => {
+            console.log(contador)
+    }
+
     return (
         <div>
             <h1>Bienvenido a nuestra {nombre}!</h1>
@@ -14,18 +21,8 @@ const ItemListContainer = ({nombre}) => {
                 <Card.Text>
                     Papeleria utilizada para collage y manualidades.
                 </Card.Text>
-                <div className="countInpu">
-                    <Button variant="outline-secondary">
-                        <span class="material-icons">remove_circle_outline</span>
-                    </Button>
-                    <InputGroup className="mb-3">
-                        <InputGroup.Text className="countText" id="inputGroup-sizing-default">1</InputGroup.Text>
-                    </InputGroup>
-                    <Button variant="outline-secondary">
-                        <span class="material-icons">add_circle_outline</span>
-                    </Button>
-                </div>
-                <Button variant="primary">Agregar al carrito</Button>
+                <h6>Precio unitario $450</h6>
+                <ItemCount stock={6} initial={1} onAdd={onAdd}/>
             </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -35,18 +32,8 @@ const ItemListContainer = ({nombre}) => {
                 <Card.Text>
                     Stickers de coleccion para decorar tarjetas, agendas y mucho más.
                 </Card.Text>
-                <div className="countInpu">
-                    <Button variant="outline-secondary">
-                        <span class="material-icons">remove_circle_outline</span>
-                    </Button>
-                    <InputGroup className="mb-3">
-                        <InputGroup.Text className="countText" id="inputGroup-sizing-default">1</InputGroup.Text>
-                    </InputGroup>
-                    <Button variant="outline-secondary">
-                        <span class="material-icons">add_circle_outline</span>
-                    </Button>
-                </div>
-                <Button variant="primary">Agregar al carrito</Button>
+                <h6>Precio unitario $235</h6>
+                <ItemCount stock={4} initial={1} onAdd={onAdd}/>
             </Card.Body>
             </Card>
             </div>
