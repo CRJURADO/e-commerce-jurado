@@ -1,42 +1,46 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ItemCount from "./ItemCount"
+import ItemList from "./ItemList"
 import "../styles.css"
-import { Card, Button, span, input, InputGroup, FormControl } from 'react-bootstrap'
+
+
+const productos = [
+    {id: 1, nombre: "Papel Kraft", detalle: "Papeleria utilizada para collage y manualidades.", stock: 6, precio: 450, img:"/papel_kraft.jpg"},
+    {id: 2, nombre: "Stickers griegos", detalle: "Stickers de coleccion para decorar tarjetas, agendas y mucho más.", stock: 4, precio: 235, img:"/stickers_griegos.jpg"}
+]
 
 
 const ItemListContainer = ({nombre}) => {
 
-    const onAdd = (contador) => {
+    let [prodLista, setProdLista] = useState([])
+
+    useEffect(()=>{
+
+        const promesa = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res(productos)
+            },2000)
+        })
+        
+        promesa
+        .then((productos)=>{
+            setProdLista(productos)
+        })
+        .catch(()=>{
+            console.log("Algo fallo, por favor comuniquelo.")
+        })
+
+    },[])
+
+    //De momento no se utiliza contador
+    /* const onAdd = (contador) => { 
             console.log(contador)
-    }
+    } */
 
     return (
         <div>
             <h1>Bienvenido a nuestra {nombre}!</h1>
-            <div className="prodCards">
-            <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="/papel_kraft.jpg" />
-            <Card.Body>
-                <Card.Title>Papel kraft</Card.Title>
-                <Card.Text>
-                    Papeleria utilizada para collage y manualidades.
-                </Card.Text>
-                <h6>Precio unitario $450</h6>
-                <ItemCount stock={6} initial={1} onAdd={onAdd}/>
-            </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="/stickers_griegos.jpg" />
-            <Card.Body>
-                <Card.Title>Stickers griegos</Card.Title>
-                <Card.Text>
-                    Stickers de coleccion para decorar tarjetas, agendas y mucho más.
-                </Card.Text>
-                <h6>Precio unitario $235</h6>
-                <ItemCount stock={4} initial={1} onAdd={onAdd}/>
-            </Card.Body>
-            </Card>
-            </div>
+            <ItemList prodLista={prodLista}/>
         </div>
     )
 }
