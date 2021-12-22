@@ -12,6 +12,11 @@
     margin: 3%;
 }
 
+.mainCont{
+    display: flex;
+    flex-direction: column;
+}
+
 .prodCards{
     display: flex;
     justify-content: space-between;
@@ -30,4 +35,8 @@
     width: inherit;
     height: 140%;
     justify-content: center;
+}
+
+.itemDet{
+    display: flex;
 }

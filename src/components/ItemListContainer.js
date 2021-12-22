@@ -32,10 +32,7 @@ const ItemListContainer = ({nombre}) => {
 
     },[])
 
-    //De momento no se utiliza contador
-    /* const onAdd = (contador) => { 
-            console.log(contador)
-    } */
+    
 
     return (
         <div>
