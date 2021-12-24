@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import ItemCount from "./ItemCount"
 import ItemList from "./ItemList"
 import "../styles.css"
+import { useParams } from "react-router-dom"
 
 
 const productos = [

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import ItemCount from "./ItemCount"
 import ItemDetail from "./ItemDetail"
 import "../styles.css"
+import { useParams } from "react-router-dom"
 
 const prodPrueba = {
     id: 1, 
