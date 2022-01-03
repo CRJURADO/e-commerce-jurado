@@ -3,6 +3,8 @@ import { Image} from 'react-bootstrap'
 
 const ItemDetail = ({prodDetail}) => {
 
+
+
     //Contador
      const onAdd = (contador) => { 
             console.log(contador)

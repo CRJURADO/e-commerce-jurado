@@ -19,6 +19,7 @@
 
 .prodCards{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -39,4 +40,8 @@
 
 .itemDet{
     display: flex;
+}
+
+.cards { 
+    margin-bottom: 3%;
 }

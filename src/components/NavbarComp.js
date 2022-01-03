@@ -2,10 +2,11 @@ import React from "react"
 import "../styles.css"
 import { Link, NavLink } from "react-router-dom"
 import CartWidget from "./CartWidget"
-import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container, Image } from 'react-bootstrap'
+import { Navbar, NavDropdown, Nav, Container, Image } from 'react-bootstrap'
 
 
  const NavbarComp = ({links}) => {
+   
         return (
 
           <Navbar bg="light" expand="lg">
@@ -16,16 +17,16 @@ import { Navbar, NavDropdown, Form, FormControl, Button, Nav, Container, Image }
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <NavLink to="/">Home</NavLink>
-                  <NavLink to="/nosotros">Nosotros</NavLink>
+                  <Nav.Link as={Link} to="/">Home</Nav.Link>
+                  <Nav.Link as={Link}  to="/nosotros">Nosotros</Nav.Link>
                   <NavDropdown title="Productos" id="basic-nav-dropdown">
-                    <NavDropdown.Item><NavLink key="3" to="/productos/papeleria">Papeleria</NavLink></NavDropdown.Item>
-                    <NavDropdown.Item><NavLink key="4" to="/productos/artistica">Artistica</NavLink></NavDropdown.Item>
-                    <NavDropdown.Item><NavLink key="5" to="/productos/bujo">Articulos para bujo</NavLink></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="3" to="/productos/3">Papeleria</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="4" to="/productos/4">Artistica</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="5" to="/productos/5">Articulos para bujo</Nav.Link></NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item><NavLink key="6" to="/productos">Todo</NavLink></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="6" to="/productos">Todo</Nav.Link></NavDropdown.Item>
                   </NavDropdown>
-                  <NavLink to="/contacto">Contacto</NavLink>
+                  <Nav.Link as={Link} to="/contacto">Contacto</Nav.Link>
                   <CartWidget/>
                 </Nav>
               </Navbar.Collapse>

@@ -14,7 +14,8 @@ function App () {
         { href: "/productos/artistica", name: "artistica", id: 4 },
         { href: "/productos/bujo", name: "bujo", id: 5 },
         { href: "/productos", name: "todos", id: 6 },
-        { href: "/contacto", name: "contacto", id: 7 }
+        { href: "/contacto", name: "contacto", id: 7 },
+        { href: "/detalle", name: "detalle", id: 8 }
     ]
 
     return (
@@ -26,13 +27,16 @@ function App () {
                         <Routes>
                             <Route path="/" element={<ItemListContainer greeting={"Libreria online"} />} />
                             <Route path="/productos/:id" element={<ItemListContainer greeting={"Libreria online"} />} />
-                            <Route path="/producto/:id" element={<ItemDetailContainer />} />
+                            <Route path="/productos" element={<ItemListContainer greeting={"Libreria online"} />} />
+                            <Route path="/detalle/:id" element={<ItemDetailContainer />} />
                         </Routes>
                     </div>
                 </main>
             </BrowserRouter>
 
     )
+
+    
 }
 
 export default App

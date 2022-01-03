@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react'
 import ItemList from "./ItemList"
+import productosJson from "../productos.json"
 import "../styles.css"
 import { useParams } from "react-router-dom"
 
 
-const productos = [
-    {id: 1, nombre: "Papel Kraft", detalle: "Papeleria utilizada para collage y manualidades.", stock: 6, precio: 450, img:"/papel_kraft.jpg"},
-    {id: 2, nombre: "Stickers griegos", detalle: "Stickers de coleccion para decorar tarjetas, agendas y mucho más.", stock: 4, precio: 235, img:"/stickers_griegos.jpg"}
-]
+const ItemListContainer = ({greeting}) => {
 
+    let productos = productosJson;
 
-const ItemListContainer = ({nombre}) => {
+    const params = useParams();
+    let catId = params.id;
+    
 
     let [prodLista, setProdLista] = useState([])
+
 
     useEffect(()=>{
 
@@ -36,8 +38,8 @@ const ItemListContainer = ({nombre}) => {
 
     return (
         <div>
-            <h1>Bienvenido a nuestra {nombre}!</h1>
-            <ItemList prodLista={prodLista}/>
+            <h1>Bienvenido a nuestra {greeting}!</h1>
+            <ItemList prodLista={prodLista} catId={catId}/>
         </div>
     )
 }
