@@ -6,15 +6,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     let [contador, setContador] = useState(initial)
 
-    let [estado,setEstado] = useState(false)
-
-    let [lista, setLista] = useState([])
-
     const sumar = () => {
 
         if(contador < stock) {
         setContador(contador + 1)
-        setLista()
         }
     }
 
@@ -22,6 +17,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
         if(contador > 1) {
             setContador(contador - 1)
         }
+    }
+
+    const clickOnAdd = (contador) => {
+        onAdd(contador)
     }
 
 
@@ -38,7 +37,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <span class="material-icons">add_circle_outline</span>
                 </Button>
             </div>
-            <Button onClick={onAdd(contador)} variant="primary">Agregar al carrito</Button>
+            <Button onClick={()=>clickOnAdd(contador)} variant="primary">Agregar al carrito</Button>
         </div>
     )
 }

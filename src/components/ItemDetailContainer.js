@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
     let productos = productosJson;
 
     const params = useParams();
-    console.log(params.id);
+
     let [prodDetail, setProdDetail] = useState({})
 
     useEffect(()=>{
