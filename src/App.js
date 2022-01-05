@@ -7,26 +7,15 @@ import ItemDetailContainer from "./components/ItemDetailContainer"
 
 function App () {
 
-    const links = [
-        { href: "/", name: "home", id: 1 },
-        { href: "/nosotros", name: "nosotros", id: 2 },
-        { href: "/productos/papeleria", name: "papeleria", id: 3 },
-        { href: "/productos/artistica", name: "artistica", id: 4 },
-        { href: "/productos/bujo", name: "bujo", id: 5 },
-        { href: "/productos", name: "todos", id: 6 },
-        { href: "/contacto", name: "contacto", id: 7 },
-        { href: "/detalle", name: "detalle", id: 8 }
-    ]
-
     return (
         
             <BrowserRouter>
-                <NavbarComp links={links}/>
+                <NavbarComp/>
                 <main className="main">
                     <div className="mainCont">
                         <Routes>
                             <Route path="/" element={<ItemListContainer greeting={"Libreria online"} />} />
-                            <Route path="/productos/:id" element={<ItemListContainer greeting={"Libreria online"} />} />
+                            <Route path="/productos/:nombre" element={<ItemListContainer greeting={"Libreria online"} />} />
                             <Route path="/productos" element={<ItemListContainer greeting={"Libreria online"} />} />
                             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
                         </Routes>

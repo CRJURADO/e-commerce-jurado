@@ -5,7 +5,7 @@ import CartWidget from "./CartWidget"
 import { Navbar, NavDropdown, Nav, Container, Image } from 'react-bootstrap'
 
 
- const NavbarComp = ({links}) => {
+ const NavbarComp = () => {
    
         return (
 
@@ -20,9 +20,9 @@ import { Navbar, NavDropdown, Nav, Container, Image } from 'react-bootstrap'
                   <Nav.Link as={Link} to="/">Home</Nav.Link>
                   <Nav.Link as={Link}  to="/nosotros">Nosotros</Nav.Link>
                   <NavDropdown title="Productos" id="basic-nav-dropdown">
-                    <NavDropdown.Item><Nav.Link as={Link} key="3" to="/productos/3">Papeleria</Nav.Link></NavDropdown.Item>
-                    <NavDropdown.Item><Nav.Link as={Link} key="4" to="/productos/4">Artistica</Nav.Link></NavDropdown.Item>
-                    <NavDropdown.Item><Nav.Link as={Link} key="5" to="/productos/5">Articulos para bujo</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="3" to="/productos/Papeleria">Papeleria</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="4" to="/productos/Artistica">Artistica</Nav.Link></NavDropdown.Item>
+                    <NavDropdown.Item><Nav.Link as={Link} key="5" to="/productos/ArtBujo">Articulos para bujo</Nav.Link></NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item><Nav.Link as={Link} key="6" to="/productos">Todo</Nav.Link></NavDropdown.Item>
                   </NavDropdown>

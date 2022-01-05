@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Item from "./Item"
 import "../styles.css"
 
-const ItemList = ({prodLista, catId}) => {
+const ItemList = ({prodLista}) => {
 
     return (
         <div className="prodCards">

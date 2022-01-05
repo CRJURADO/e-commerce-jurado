@@ -9,37 +9,42 @@ const ItemListContainer = ({greeting}) => {
 
     let productos = productosJson;
 
-    const params = useParams();
-    let catId = params.id;
-    
+    const {nombre} = useParams();
 
     let [prodLista, setProdLista] = useState([])
 
 
     useEffect(()=>{
 
-        const promesa = new Promise((res,rej)=>{
+
+        if(nombre){
+            console.log("Productos por categoria")
+            productos = productos.filter(prod => prod.tag === nombre)
+        }else{
+            console.log("Todos los productos")
+            productos = productosJson
+        }
+
+        const getCat = new Promise((res,rej)=>{
             setTimeout(()=>{
                 res(productos)
             },2000)
         })
         
-        promesa
-        .then((productos)=>{
-            setProdLista(productos)
-        })
-        .catch(()=>{
-            console.log("Algo fallo, por favor comuniquelo.")
-        })
+        getCat
+            .then((productos) => {
+                setProdLista(productos)
+            }).catch(()=>{
+                console.log("Algo fallo, por favor comuniquelo.")
+            })
 
-    },[])
-
-    
+    }, [nombre])
+  
 
     return (
         <div>
             <h1>Bienvenido a nuestra {greeting}!</h1>
-            <ItemList prodLista={prodLista} catId={catId}/>
+            <ItemList prodLista={prodLista}/>
         </div>
     )
 }

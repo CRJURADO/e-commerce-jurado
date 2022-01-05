@@ -6,7 +6,7 @@
         "stock": 6, 
         "precio": 450, 
         "img":"/imgs/papel_kraft.jpg",
-        "tag": 3
+        "tag": "Papeleria"
     },
     {
         "id": 2, 
@@ -15,7 +15,7 @@
         "stock": 4, 
         "precio": 235, 
         "img":"/imgs/stickers_griegos.jpg",
-        "tag": 5
+        "tag": "ArtBujo"
     },
     {
         "id": 3, 
@@ -24,7 +24,7 @@
         "stock": 16, 
         "precio": 520, 
         "img":"/imgs/papel_floral.jpg",
-        "tag": 3
+        "tag": "Papeleria"
     },
     {
         "id": 4, 
@@ -33,7 +33,7 @@
         "stock": 14, 
         "precio": 235, 
         "img":"/imgs/cat_postal.jpg",
-        "tag": 3
+        "tag": "Papeleria"
     },
     {
         "id": 5, 
@@ -42,7 +42,7 @@
         "stock": 10, 
         "precio": 780, 
         "img":"/imgs/papeleria_surtido.jpg",
-        "tag": 3
+        "tag": "Papeleria"
     },
     {
         "id": 6, 
@@ -51,7 +51,7 @@
         "stock": 7, 
         "precio": 235, 
         "img":"/imgs/sobre_floral.jpg",
-        "tag": 3
+        "tag": "Papeleria"
     },
     {
         "id": 7, 
@@ -60,7 +60,7 @@
         "stock": 16, 
         "precio": 690, 
         "img":"/imgs/sello_goma.jpg",
-        "tag": 4
+        "tag": "Artistica"
     },
     {
         "id": 8, 
@@ -69,7 +69,7 @@
         "stock": 14, 
         "precio": 235, 
         "img":"/imgs/sello_lacre1.jpg",
-        "tag": 4
+        "tag": "Artistica"
     },
     {
         "id": 9, 
@@ -78,7 +78,7 @@
         "stock": 9, 
         "precio": 935, 
         "img":"/imgs/sello_madera.jpg",
-        "tag": 4
+        "tag": "Artistica"
     },
     {
         "id": 10, 
@@ -87,7 +87,7 @@
         "stock": 16, 
         "precio": 520, 
         "img":"/imgs/sello_madera1.jpg",
-        "tag": 4
+        "tag": "Artistica"
     },
     {
         "id": 11, 
@@ -96,7 +96,7 @@
         "stock": 12, 
         "precio": 345, 
         "img":"/imgs/stencil_geometrico.jpg",
-        "tag": 4
+        "tag": "Artistica"
     },
     {
         "id": 12, 
@@ -105,7 +105,7 @@
         "stock": 11, 
         "precio": 580, 
         "img":"/imgs/stickers_planets.jpg",
-        "tag": 5
+        "tag": "ArtBujo"
     },
     {
         "id": 13, 
@@ -114,7 +114,7 @@
         "stock": 9, 
         "precio": 235, 
         "img":"/imgs/washi_foil.png",
-        "tag": 5
+        "tag": "ArtBujo"
     },
     {
         "id": 14, 
@@ -123,7 +123,7 @@
         "stock": 16, 
         "precio": 690, 
         "img":"/imgs/washi_stories.jpg",
-        "tag": 5
+        "tag": "ArtBujo"
     },
     {
         "id": 15, 
@@ -132,6 +132,6 @@
         "stock": 14, 
         "precio": 235, 
         "img":"/imgs/washi_vanGogh.jpg",
-        "tag": 5
+        "tag": "ArtBujo"
     }
 ]

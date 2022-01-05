@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import "../styles.css"
-import { Card, Button, span, input, InputGroup, FormControl } from 'react-bootstrap'
+import { Button, span, InputGroup } from 'react-bootstrap'
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
