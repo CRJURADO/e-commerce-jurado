@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import ItemCount from "./ItemCount"
 import { Image} from 'react-bootstrap'
+import { useContexto } from "./CartContext"
 
 const ItemDetail = ({prodDetail}) => {
 
     const [carrito,setCarrito] = useState([])
+    const { addItem } = useContexto()
 
     //Contador
      const onAdd = (contador) => { 
-            console.log("Soy detail " + contador)
-            setCarrito([...carrito,{cantPedida:contador}])
-            console.log(carrito)
+            console.log("Soy detail " + contador + "PROD" + prodDetail)
+            addItem(contador,prodDetail)
     } 
     
     return (

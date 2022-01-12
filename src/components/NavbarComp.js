@@ -5,6 +5,7 @@ import CartWidget from "./CartWidget"
 import { Navbar, NavDropdown, Nav, Container, Image } from 'react-bootstrap'
 
 
+
  const NavbarComp = () => {
    
         return (

@@ -4,24 +4,28 @@ import "./styles.css"
 import NavbarComp from "./components/NavbarComp"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
+import Carrito from "./components/Carrito"
+import CustomProvider, { Provider } from "./components/CartContext"
 
 function App () {
 
     return (
-        
-            <BrowserRouter>
-                <NavbarComp/>
-                <main className="main">
-                    <div className="mainCont">
-                        <Routes>
-                            <Route path="/" element={<ItemListContainer greeting={"Libreria online"} />} />
-                            <Route path="/productos/:nombre" element={<ItemListContainer greeting={"Libreria online"} />} />
-                            <Route path="/productos" element={<ItemListContainer greeting={"Libreria online"} />} />
-                            <Route path="/detalle/:id" element={<ItemDetailContainer />} />
-                        </Routes>
-                    </div>
-                </main>
-            </BrowserRouter>
+            <CustomProvider>
+                <BrowserRouter>
+                    <NavbarComp/>
+                    <main className="main">
+                        <div className="mainCont">
+                            <Routes>
+                                <Route path="/" element={<ItemListContainer greeting={"Libreria online"} />} />
+                                <Route path="/productos/:nombre" element={<ItemListContainer greeting={"Libreria online"} />} />
+                                <Route path="/productos" element={<ItemListContainer greeting={"Libreria online"} />} />
+                                <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+                                <Route path="/carrito" element={<Carrito />} />
+                            </Routes>
+                        </div>
+                    </main>
+                </BrowserRouter>
+            </CustomProvider>
 
     )
 
