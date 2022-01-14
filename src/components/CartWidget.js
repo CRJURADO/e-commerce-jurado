@@ -6,12 +6,19 @@ import { useContexto } from "./CartContext"
 const CartWidget = () => {
 
     const { cantidad_total } = useContexto()
+    
 
-    return (
-        <Nav.Link as={Link} to="/carrito">
-            <span className="material-icons">shopping_basket</span>   
-            {cantidad_total}     
-        </Nav.Link>
+    return ( 
+        <div> 
+            {cantidad_total > 0 ? (
+                <Nav.Link as={Link} to="/carrito">
+                    <span className="material-icons">shopping_basket</span>   
+                    {cantidad_total}     
+                </Nav.Link>
+            ) : <span className="material-icons">remove_shopping_cart</span>
+            }
+        </div>
+        
     )
 }
 
