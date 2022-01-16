@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import ItemList from "./ItemList"
-import productosJson from "../productos.json"
 import "../styles.css"
 import { useParams } from "react-router-dom"
+import { db } from "./firebase"
+import { getDocs, query, collection , where } from "firebase/firestore"
 
 
 const ItemListContainer = ({greeting}) => {
-
-    let productos = productosJson;
 
     const {nombre} = useParams();
 
@@ -16,27 +15,30 @@ const ItemListContainer = ({greeting}) => {
 
     useEffect(()=>{
 
+        const productosCollection = collection(db, "productos")
+
 
         if(nombre){
             console.log("Productos por categoria")
-            productos = productos.filter(prod => prod.tag === nombre)
+            const consulta = query(productosCollection,where("tag","==",nombre))
+
+            /* await */ getDocs(consulta).then(({ docs }) => {
+                setProdLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+
         }else{
             console.log("Todos los productos")
-            productos = productosJson
-        }
 
-        const getCat = new Promise((res,rej)=>{
-            setTimeout(()=>{
-                res(productos)
-            },2000)
-        })
-        
-        getCat
-            .then((productos) => {
-                setProdLista(productos)
-            }).catch(()=>{
-                console.log("Algo fallo, por favor comuniquelo.")
+            getDocs(productosCollection).then(({ docs }) => {
+                setProdLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
             })
+            .catch((error) => {
+                console.log(error)
+            })
+        }
 
     }, [nombre])
   
