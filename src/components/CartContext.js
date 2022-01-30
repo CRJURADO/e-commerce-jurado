@@ -14,8 +14,9 @@ const CustomProvider = ({children}) => {
 
     const [cantidad_total,setCantidadTotal] = useState(0)
     const [carrito,setCarrito] = useState([])
+    const [precio_total,setPrecioTotal] = useState(0)
 
-    const addItem = (contador,prodDetail) => {
+    const addItem = (contador,prodDetail, precioU) => {
 
         const id = prodDetail.id
         console.log(id)
@@ -34,8 +35,10 @@ const CustomProvider = ({children}) => {
             setCarrito([...carrito, itemAndQty])
             console.log(carrito)
         }
-
+        
         setCantidadTotal(cantidad_total + contador)
+        setPrecioTotal(precio_total + precioU)
+
     }
 
     const removeItem = (id, contador) => {
@@ -44,7 +47,9 @@ const CustomProvider = ({children}) => {
         setCantidadTotal(cantidad_total - contador)
     }
 
-    const clear = () => {  setCarrito([])  }
+    const clear = () => {  
+        setCarrito([])
+        setCantidadTotal(0)  }
 
     const isInCarrito = (id) => {
         return carrito.some((p) => p.id === id)
@@ -52,6 +57,7 @@ const CustomProvider = ({children}) => {
 
     const valorDelContexto = {
         cantidad_total , 
+        precio_total,
         carrito , 
         addItem , 
         removeItem ,

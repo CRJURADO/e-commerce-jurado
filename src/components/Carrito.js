@@ -2,11 +2,9 @@ import { Button} from 'react-bootstrap'
 import { Link} from "react-router-dom"
 import { useContexto } from "./CartContext"
 
-
 const Carrito = () => {
 
     const { carrito, removeItem, clear } = useContexto()
-
 
     return (
         <div>
@@ -16,15 +14,17 @@ const Carrito = () => {
                     {carrito.map((producto, indice) => {
                         return <li key={indice}>
                                    {producto.nombre} - ${producto.precio} - Cantidad: {producto.contador}
-                                   <Button variant="primary" onClick={()=>removeItem(producto.id,producto.contador)}>Borrar</Button>
+                                   <Button variant="outline-danger" onClick={()=>removeItem(producto.id,producto.contador)}>Borrar</Button>
                                </li>
                                
                     })}
-                    <button>finalizar compra</button>
+                    <Button variant="outline-primary" as={Link} to="/resume">Finalizar compra</Button>
+                    <Button variant="outline-success" as={Link} to="/">Seguir comprando</Button>
+                    <Button variant="outline-secondary" onClick={()=>clear()}>Limpiar carrito</Button>
                 </ul>
             ) : <div>  
                     <p>No hay productos en el carrito</p>
-                    <Button variant="primary" as={Link} to="/">Seguir comprando</Button>
+                    <Button variant="outline-success" as={Link} to="/">Seguir comprando</Button>
                 </div>}
 
         </div>

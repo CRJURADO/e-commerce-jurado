@@ -1,18 +1,32 @@
 import { useState } from 'react'
+import {NotificationContainer, NotificationManager} from "react-notifications"
 import ItemCount from "./ItemCount"
 import { Image} from 'react-bootstrap'
+import 'react-notifications/lib/notifications.css'
 import { useContexto } from "./CartContext"
+
 
 const ItemDetail = ({prodDetail}) => {
 
     const [carrito,setCarrito] = useState([])
     const { addItem } = useContexto()
 
+    const createNotification = (type) => {  
+          switch (type) {
+            case 'success':
+              NotificationManager.success('Usted agregó este producto al carrito', 'Producto agregado')
+              break
+          }
+    }
+
     //Contador
      const onAdd = (contador) => { 
-            console.log("Soy detail " + contador + "PROD" + prodDetail)
-            addItem(contador,prodDetail)
+            let precioU = prodDetail.precio * contador
+            addItem(contador,prodDetail, precioU)
+            createNotification('success')
     } 
+
+
     
     return (
         <div>
@@ -21,7 +35,8 @@ const ItemDetail = ({prodDetail}) => {
             <p>Nombre: {prodDetail.nombre}</p>
             <p>Detalle: {prodDetail.detalle}</p>
             <p>Precio: ${prodDetail.precio}</p>
-            <ItemCount stock={prodDetail.stock} initial={1} onAdd={onAdd} />
+            <NotificationContainer/>
+            <ItemCount stock={prodDetail.stock} initial={1} onAdd={onAdd} />  
         </div>
     )
 }

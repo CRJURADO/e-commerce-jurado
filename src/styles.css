@@ -45,3 +45,12 @@
 .cards { 
     margin-bottom: 3%;
 }
+
+#contItm{
+    display: flex;
+    margin-left: 25px;
+}
+
+.divCount{
+    display: flex;
+}

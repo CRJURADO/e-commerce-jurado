@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom"
 const ItemDetailContainer = () => {
 
     const { id } = useParams();
-
+    console.log(id)
     let [prodDetail, setProdDetail] = useState({})
 
     useEffect(()=>{
@@ -21,7 +21,8 @@ const ItemDetailContainer = () => {
 
         getDoc(refDoc)
             .then((resultado) => {
-                setProdDetail(resultado.data())
+                setProdDetail({id: id , ...resultado.data()})
+                console.log("Aqui" + prodDetail.id)
             })
             .catch((error) => {
 
