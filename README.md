@@ -34,7 +34,7 @@ La funcionalidad de la aplicación es permitir las ventas online de una libreria
 - Se iniciará en el navegador
 
 **Video Demo**
-![Demonstration web]()
+![Demonstration web](.public/demo/Libreria.gif)
 
 #### Sobre mi
 
