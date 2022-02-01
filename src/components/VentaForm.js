@@ -1,8 +1,9 @@
 import React from "react"
 import { useState } from "react"
+import { Link} from "react-router-dom"
 import { Form, Button } from 'react-bootstrap'
 import { useContexto } from "./CartContext"
-import { addDoc, collection , serverTimestamp , updateDoc } from "firebase/firestore"
+import { addDoc, collection , serverTimestamp} from "firebase/firestore"
 import { db } from "./firebase"
 
 const VentaForm = () => {
@@ -25,8 +26,6 @@ const VentaForm = () => {
 
     const finalizarCompra = () => {
 
-        console.log("Guardando la compra en la db...")
-
         const ventasCollection = collection(db, "ventas")
         addDoc(ventasCollection,{
             buyer : thisBuyer  ,
@@ -35,7 +34,6 @@ const VentaForm = () => {
             total : precio_total
         })
         .then((resultado)=>{
-            console.log(resultado)
             clear()
         })
     }
@@ -66,7 +64,7 @@ const VentaForm = () => {
                     </Form.Text>
                 </Form.Group>
 
-                <Button onClick={()=>{finalizarCompra()}}>
+                <Button onClick={()=>{finalizarCompra()}} as={Link} to="/ventaCongrats">
                     Comprar
                 </Button>
             </Form>

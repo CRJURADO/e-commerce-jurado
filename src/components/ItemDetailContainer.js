@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import ItemCount from "./ItemCount"
 import ItemDetail from "./ItemDetail"
 import "../styles.css"
 import { collection, doc, getDoc } from "firebase/firestore"
@@ -10,7 +9,6 @@ import { useParams } from "react-router-dom"
 const ItemDetailContainer = () => {
 
     const { id } = useParams();
-    console.log(id)
     let [prodDetail, setProdDetail] = useState({})
 
     useEffect(()=>{
@@ -22,7 +20,6 @@ const ItemDetailContainer = () => {
         getDoc(refDoc)
             .then((resultado) => {
                 setProdDetail({id: id , ...resultado.data()})
-                console.log("Aqui" + prodDetail.id)
             })
             .catch((error) => {
 

@@ -19,10 +19,10 @@ const ItemListContainer = ({greeting}) => {
 
 
         if(nombre){
-            console.log("Productos por categoria")
+
             const consulta = query(productosCollection,where("tag","==",nombre))
 
-            /* await */ getDocs(consulta).then(({ docs }) => {
+            getDocs(consulta).then(({ docs }) => {
                 setProdLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
             })
             .catch((error) => {
@@ -30,7 +30,6 @@ const ItemListContainer = ({greeting}) => {
             })
 
         }else{
-            console.log("Todos los productos")
 
             getDocs(productosCollection).then(({ docs }) => {
                 setProdLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))

@@ -6,6 +6,7 @@ import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import Carrito from "./components/Carrito"
 import VentaForm from "./components/VentaForm"
+import VentaCongrats from "./components/VentaCongrats"
 import CustomProvider, { Provider } from "./components/CartContext"
 
 function App () {
@@ -23,6 +24,7 @@ function App () {
                                 <Route path="/detalle/:id" element={<ItemDetailContainer />} />
                                 <Route path="/carrito" element={<Carrito />} />
                                 <Route path="/resume" element={<VentaForm />} />
+                                <Route path="/ventaCongrats" element={<VentaCongrats />} />
                             </Routes>
                         </div>
                     </main>

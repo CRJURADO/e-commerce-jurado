@@ -7,11 +7,11 @@ La funcionalidad de la aplicación es permitir las ventas online de una libreria
 
 * Pagina principal con el listado de los productos disponibles.
 * Menú productos para poder filtrar por sus diferentes categorias y tambien volver a mostrar la totalidad.
-* Pantalla de detalle de cada producto pode se puede ver la imagen, seleccionar cantidades y agregar al carrito.
+* Pantalla de detalle de cada producto donde se puede ver la imagen, seleccionar cantidades y agregar al carrito.
 * Contador de items en el carrito, disponible en todo momento en la parte superior derecha del menú.
 * Carrito para mostrar la lista de productos elegidos proximos a comprar.
 * Form para finalizar compra indicando los datos del comprador que serán posteriormente almacenados en la base de datos.
-* Pagina de compra existosa agradeciendo al cliente por su compra y detallado la compra.
+* Pagina de compra existosa agradeciendo al cliente por su compra y detallado la compra. (No terminado...la intencion era devolver los datos del cliente y la compra en la pantalla pero no lo logre...)
 
 ### Tecnologias Utilizadas
 

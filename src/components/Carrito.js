@@ -4,7 +4,7 @@ import { useContexto } from "./CartContext"
 
 const Carrito = () => {
 
-    const { carrito, removeItem, clear } = useContexto()
+    const { carrito, removeItem, clear, precio_total } = useContexto()
 
     return (
         <div>
@@ -18,6 +18,7 @@ const Carrito = () => {
                                </li>
                                
                     })}
+                    <h2>Total: ${precio_total} </h2>
                     <Button variant="outline-primary" as={Link} to="/resume">Finalizar compra</Button>
                     <Button variant="outline-success" as={Link} to="/">Seguir comprando</Button>
                     <Button variant="outline-secondary" onClick={()=>clear()}>Limpiar carrito</Button>
