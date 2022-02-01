@@ -28,13 +28,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <div>
             <div className="countInpu">
                 <Button onClick={restar} variant="outline-secondary">
-                    <span class="material-icons">remove_circle_outline</span>
+                    <span className="material-icons">remove_circle_outline</span>
                 </Button>
                 <InputGroup className="mb-3">
                     <InputGroup.Text className="countText" id="inputGroup-sizing-default">{contador}</InputGroup.Text>
                 </InputGroup>
                 <Button onClick={sumar} variant="outline-secondary">
-                    <span class="material-icons">add_circle_outline</span>
+                    <span className="material-icons">add_circle_outline</span>
                 </Button>
             </div>
             <Button onClick={()=>clickOnAdd(contador)} variant="primary">Agregar al carrito</Button>

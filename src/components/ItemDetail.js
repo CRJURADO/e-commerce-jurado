@@ -19,7 +19,7 @@ const ItemDetail = ({prodDetail}) => {
           }
     }
 
-    //Contador
+
      const onAdd = (contador) => { 
             let precioU = prodDetail.precio * contador
             addItem(contador,prodDetail, precioU)

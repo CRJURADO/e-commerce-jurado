@@ -22,7 +22,7 @@ const VentaCongrats = () => {
     },[])
 
     return (
-        <div className="">
+        <div>
             <h2>Muchas gracias por su compra!</h2>
         </div>
     )

@@ -8,8 +8,6 @@ export const useContexto = () => {
     return useContext(contexto)
 }
 
-
-
 const CustomProvider = ({children}) => {
 
     const [cantidad_total,setCantidadTotal] = useState(0)
@@ -19,7 +17,6 @@ const CustomProvider = ({children}) => {
     const addItem = (contador,prodDetail, precioU) => {
 
         const id = prodDetail.id
-        console.log(id)
 
         if(isInCarrito(id)){
 
