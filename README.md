@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Aplicación E-commerce de libreria
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La funcionalidad de la aplicación es permitir las ventas online de una libreria. 
+ 
 
-## Available Scripts
+### CARACTERISTICAS
 
-In the project directory, you can run:
+* Pagina principal con el listado de los productos disponibles.
+* Menú productos para poder filtrar por sus diferentes categorias y tambien volver a mostrar la totalidad.
+* Pantalla de detalle de cada producto pode se puede ver la imagen, seleccionar cantidades y agregar al carrito.
+* Contador de items en el carrito, disponible en todo momento en la parte superior derecha del menú.
+* Carrito para mostrar la lista de productos elegidos proximos a comprar.
+* Form para finalizar compra indicando los datos del comprador que serán posteriormente almacenados en la base de datos.
+* Pagina de compra existosa agradeciendo al cliente por su compra y detallado la compra.
 
-### `npm start`
+### Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React (La base de todo).
+- Boostrap-react (La mayoria de los estilos aplicados).
+- Firebase (Base de datos no relacional).
+- React-router-dom (Para generar los linkeos entre pantallas).
+- React-notifications (Genera el aviso de "Producto agregado al carrito").
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Como descargar y usar el proyecto
 
-### `npm test`
+- Clonar el repositorio
+> https://github.com/CRJURADO/e-commerce-jurado.git
+- Situarse en la carpeta del proyecto con
+> cd < rutadelproyecto >
+- Ejecutar el comando desde tu terminal
+> npm install
+- Cuando termine, utiliza el comando para iniciar la app
+> npm start
+- Se iniciará en el navegador
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Video Demo**
+![Demonstration web]()
 
-### `npm run build`
+#### Sobre mi
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Mi nombre el Carolina Jurado, inicie en el mundo de la programación a fines del 2018, estudiando principalmente tecnologias de Backend y durante el año 2021 me dedique a hacer una carrera de FrontEnd en CoderHouse.
+Si te gustaria saber más de mi te dejo el link a mi [Linkedin](www.linkedin.com/in/carolina-jurado-b22a0817a)
